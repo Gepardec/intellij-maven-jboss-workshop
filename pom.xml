@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>at.gepardec.intellij-maven-jboss</groupId>
+    <artifactId>intellij-maven-jboss-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <apache-commons-collections.version>4.4</apache-commons-collections.version>
+    </properties>
+
+    <modules>
+        <module>intellij-maven-jboss-helloworld-rs</module>
+        <module>intellij-maven-jboss-helloworld-service</module>
+        <module>intellij-maven-jboss-helloworld-persistense</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.3</version>
+                    <executions>
+                        <execution>
+                            <id>default-war</id>
+                            <goals>
+                                <goal>war</goal>
+                            </goals>
+                            <phase>deploy</phase>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>io.swagger</groupId>
+                    <artifactId>swagger-codegen-maven-plugin</artifactId>
+                    <version>2.4.8</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
