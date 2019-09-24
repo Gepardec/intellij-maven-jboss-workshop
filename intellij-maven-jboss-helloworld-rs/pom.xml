@@ -20,14 +20,14 @@
         <dependency>
             <groupId>org.jboss.spec.javax.annotation</groupId>
             <artifactId>jboss-annotations-api_1.3_spec</artifactId>
-            <version>1.0.1.Final</version>
+            <version>1.0.1.Final-redhat-1</version>
         </dependency>
 
         <!-- DO NOT DELETE!!! -->
         <dependency>
             <groupId>org.jboss.spec.javax.ws.rs</groupId>
             <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
-            <version>1.0.2.Final</version>
+            <version>1.0.2.Final-redhat-00001</version>
         </dependency>
 
         <dependency>
@@ -43,6 +43,7 @@
             <version>${project.version}</version>
             <type>jar</type>
             <classifier>jar</classifier>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
