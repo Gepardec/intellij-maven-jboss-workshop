@@ -43,7 +43,6 @@
             <version>${project.version}</version>
             <type>jar</type>
             <classifier>jar</classifier>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
