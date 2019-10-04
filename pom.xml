@@ -13,7 +13,7 @@
     <modules>
         <module>intellij-maven-jboss-helloworld-rs</module>
         <module>intellij-maven-jboss-helloworld-service</module>
-        <module>intellij-maven-jboss-helloworld-persistence</module>
+<!--        <module>intellij-maven-jboss-helloworld-persistence</module>-->
     </modules>
 
     <dependencies>
