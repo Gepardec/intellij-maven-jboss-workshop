@@ -10,12 +10,6 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>javax.enterprise</groupId>
-            <artifactId>cdi-api</artifactId>
-            <version>2.0</version>
-        </dependency>
-
         <!-- DO NOT DELETE!!! -->
         <dependency>
             <groupId>org.jboss.spec.javax.annotation</groupId>
@@ -31,13 +25,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-            <version>4.4</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>at.gepardec.intellij-maven-jboss</groupId>
             <artifactId>intellij-maven-jboss-helloworld-service</artifactId>
             <version>${project.version}</version>
@@ -46,27 +33,24 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.9</version>
-        </dependency>
-
-        <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>4.1.1</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.1.0</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.opentest4j</groupId>
             <artifactId>opentest4j</artifactId>
             <version>1.2.0</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
@@ -82,7 +66,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.2</version>
                 <executions>
                     <execution>
                         <id>create</id>
@@ -104,26 +87,4 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>execute-it</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <version>3.0.0-M3</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>integration-test</goal>
-                                    <goal>verify</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
