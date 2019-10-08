@@ -1,4 +1,9 @@
 # intellij-maven-jboss-workshop
+___
+
+*Fixed, but maybe not so pretty* (csalmhof)
+
+___
 
 Try to fix the maven project!
 
