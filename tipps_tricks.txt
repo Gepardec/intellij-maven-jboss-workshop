@@ -1,0 +1,33 @@
+Plugins:
+Archive Browser
+aufklappbare archive in intellik
+
+GitToolBox
+Autofetch
+einzelcommits anklickbar
+inline blame
+kommt das mit gittoolbox ? -> altgr b -> checkout / merge / suche tippen.
+
+Grep Console
+colored output.
+
+Maven Helper
+strg alt r -> rerun
+maven command kann auf key gebunden werden. strg b -> clean install
+dependency analyzer
+
+Save Actions
+optimze imports, etc.
+
+Nyan Progress Bar :-D
+weils spaß macht.
+
+others
+shift shift -> terminal
+run configruation -> templates -> export
+database -> sehr mächtig.
+local history
+
+explainshell -> kann man in sh aktivieren.
+
+
