@@ -14,7 +14,6 @@
     <modules>
         <module>intellij-maven-jboss-helloworld-rs</module>
         <module>intellij-maven-jboss-helloworld-service</module>
-<!--        <module>intellij-maven-jboss-helloworld-persistence</module>-->
     </modules>
 
     <dependencies>
@@ -26,50 +25,4 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.2.3</version>
-                    <executions>
-                        <execution>
-                            <id>default-war</id>
-                            <goals>
-                                <goal>war</goal>
-                            </goals>
-                            <phase>deploy</phase>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>io.swagger</groupId>
-                    <artifactId>swagger-codegen-maven-plugin</artifactId>
-                    <version>2.4.8</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
-    <profiles>
-        <profile>
-            <id>extra-repos</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <repositories>
-                <repository>
-                    <id>redhat-ga-repository</id>
-                    <url>https://maven.repository.redhat.com/ga/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-        </profile>
-    </profiles>
 </project>
