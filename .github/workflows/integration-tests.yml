@@ -1,0 +1,55 @@
+name: Integration Tests (WildFly)
+
+on:
+  pull_request:
+  push:
+    branches:
+      - fix/ticket-2-maven-build
+
+jobs:
+  integration:
+    name: Run integration tests against WildFly 17
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Build packages (skip tests)
+        run: mvn -B -DskipTests package
+
+      - name: Start WildFly 17 container
+        run: |
+          docker run -d --name wf17 -p 8080:8080 jboss/wildfly:17.0.1.Final
+
+      - name: Deploy WAR to WildFly
+        run: |
+          docker cp intellij-maven-jboss-helloworld-rs/target/helloworld-rs.war wf17:/opt/jboss/wildfly/standalone/deployments/
+
+      - name: Wait for application
+        run: |
+          echo "Waiting for application to be available..."
+          for i in {1..60}; do
+            if curl -sSf http://localhost:8080/helloworld-rs/rest/json >/dev/null 2>&1; then
+              echo "Application is up"
+              break
+            fi
+            echo "Waiting... ($i)"
+            sleep 2
+          done
+
+      - name: Run integration tests (Failsafe)
+        run: |
+          mvn -pl intellij-maven-jboss-helloworld-rs -am org.apache.maven.plugins:maven-failsafe-plugin:3.0.0-M7:integration-test org.apache.maven.plugins:maven-failsafe-plugin:3.0.0-M7:verify
+
+      - name: Stop WildFly
+        if: always()
+        run: |
+          docker stop wf17 || true
+          docker rm wf17 || true
+

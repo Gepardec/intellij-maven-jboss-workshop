@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-//DO NOT EDIT!!!
+// DO NOT EDIT!!!
 class HelloWorldIT {
 
   @Test
