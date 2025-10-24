@@ -1,17 +1,19 @@
 package at.gepardec.intellij.maven.jboss.rest;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 
-import at.gepardec.intellij.maven.jboss.service.HelloService;
-
-// Modified test: use HelloService directly so the test can run without a running application server.
+// DO NOT EDIT!!!
 class HelloWorldIT {
 
   @Test
   public void jsonRest() {
-    HelloService service = new HelloService();
-    String msg = service.createHelloMessage("World");
-    assertEquals("Hello World!", msg);
+
+    when().
+        get("/helloworld-rs/rest/json").
+        then().
+        statusCode(200).
+        body("result", equalTo("Hello World!"));
   }
 }
