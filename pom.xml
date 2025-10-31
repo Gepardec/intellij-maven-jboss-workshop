@@ -4,15 +4,19 @@
     <groupId>at.gepardec.intellij-maven-jboss</groupId>
     <artifactId>intellij-maven-jboss-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <apache-commons-collections.version>4.4</apache-commons-collections.version>
+        <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M7</maven.surefire.plugin.version>
+        <maven.failsafe.plugin.version>3.0.0-M7</maven.failsafe.plugin.version>
     </properties>
 
     <modules>
         <module>intellij-maven-jboss-helloworld-rs</module>
         <module>intellij-maven-jboss-helloworld-service</module>
-        <module>intellij-maven-jboss-helloworld-persistense</module>
+        <module>intellij-maven-jboss-helloworld-persistence</module>
     </modules>
 
     <build>
@@ -21,21 +25,17 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>3.2.3</version>
-                    <executions>
-                        <execution>
-                            <id>default-war</id>
-                            <goals>
-                                <goal>war</goal>
-                            </goals>
-                            <phase>deploy</phase>
-                        </execution>
-                    </executions>
+                    <version>${maven.war.plugin.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>io.swagger</groupId>
-                    <artifactId>swagger-codegen-maven-plugin</artifactId>
-                    <version>2.4.8</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${maven.failsafe.plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
