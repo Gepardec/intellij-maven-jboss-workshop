@@ -2,7 +2,7 @@
 # Version: 1.0.0
 # Author: Lisa Ortner
 # Last Updated: 2025-10-31
-# Description: Automatisiert die komplette Issue-Bearbeitung
+# Description: Automatisiert die komplette Issue-Bearbeitung mit Fork-Support
 # Parameters: [ORGANISATION], [REPOSITORY]
 # Usage: Ersetze [ORGANISATION] und [REPOSITORY] mit deinen Werten
 # Example: Gepardec/intellij-maven-jboss-workshop
@@ -27,7 +27,11 @@ Fixes #{nummer}
 
 Co-Authored-By: Claude <noreply@anthropic.com>
 
-f. Pushe den Branch zum Remote Repository
+f. Pushe den Branch zum Remote Repository:
+   - Prüfe zuerst, ob du Schreibrechte auf [ORGANISATION]/[REPOSITORY] hast
+   - Falls NEIN: Erstelle automatisch einen Fork des Repositories und pushe zum Fork
+   - Falls JA: Pushe direkt zum Original-Repository
+
 g. Erstelle IMMER einen Pull Request mit:
 
 Titel: Fix #{nummer}: {issue-titel}
