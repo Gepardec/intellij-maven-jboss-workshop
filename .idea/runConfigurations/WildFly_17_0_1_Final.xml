@@ -1,0 +1,80 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WildFly 17.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 17.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
+    <option name="UPDATING_POLICY" value="restart-server" />
+    <deployment>
+      <artifact name="intellij-maven-jboss-helloworld-rs:war">
+        <settings />
+      </artifact>
+    </deployment>
+    <server-settings>
+      <option name="SERVER" value="" />
+      <option name="BINDING_SET_NAME" value="" />
+      <option name="DOMAIN" value="false" />
+      <option name="SERVER_PATH" value="$PROJECT_DIR$/wildfly-17.0.1.Final" />
+      <option name="USERNAME" value="" />
+      <option name="PASSWORD" value="" />
+    </server-settings>
+    <STARTUP>
+      <option name="USE_DEFAULT" value="true" />
+      <option name="SCRIPT" value="" />
+      <option name="VM_PARAMETERS" value="-Djava.security.manager=allow --add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-exports=jdk.unsupported/sun.reflect=ALL-UNNAMED --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED --add-modules=java.se --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+    </STARTUP>
+    <predefined_log_file enabled="true" id="JBoss" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="9009" />
+    </RunnerSettings>
+    <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+      <option name="USE_ENV_VARIABLES" value="true" />
+      <STARTUP>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </STARTUP>
+      <SHUTDOWN>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </SHUTDOWN>
+    </ConfigurationWrapper>
+    <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+      <option name="USE_ENV_VARIABLES" value="true" />
+      <STARTUP>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </STARTUP>
+      <SHUTDOWN>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </SHUTDOWN>
+    </ConfigurationWrapper>
+    <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+      <option name="USE_ENV_VARIABLES" value="true" />
+      <STARTUP>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </STARTUP>
+      <SHUTDOWN>
+        <option name="USE_DEFAULT" value="true" />
+        <option name="SCRIPT" value="" />
+        <option name="VM_PARAMETERS" value="" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+      </SHUTDOWN>
+    </ConfigurationWrapper>
+    <method v="2">
+      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean install" />
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="intellij-maven-jboss-helloworld-rs:war" />
+      </option>
+      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/intellij-maven-jboss-helloworld-rs/pom.xml" goal="verify" />
+    </method>
+  </configuration>
+</component>

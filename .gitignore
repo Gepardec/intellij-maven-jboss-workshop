@@ -4,9 +4,12 @@
 .settings/
 
 # Intellij
-.idea/
+# .idea/
 *.iml
 *.iws
+
+# WildFly
+wildfly-17.0.1.Final/
 
 # Mac
 .DS_Store
