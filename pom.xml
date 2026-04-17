@@ -16,6 +16,19 @@
         <module>intellij-maven-jboss-helloworld-persistence</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>redhat-ga-repository</id>
+            <url>https://maven.repository.redhat.com/ga/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <build>
         <pluginManagement>
             <plugins>

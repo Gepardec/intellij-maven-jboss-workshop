@@ -3,7 +3,7 @@
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
       <artifact name="intellij-maven-jboss-helloworld-rs:war">
-        <settings/>
+        <settings />
       </artifact>
     </deployment>
     <server-settings>
@@ -14,6 +14,12 @@
       <option name="USERNAME" value="" />
       <option name="PASSWORD" value="" />
     </server-settings>
+    <STARTUP>
+      <option name="USE_DEFAULT" value="true" />
+      <option name="SCRIPT" value="" />
+      <option name="VM_PARAMETERS" value="-Djava.security.manager=allow --add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-exports=jdk.unsupported/sun.reflect=ALL-UNNAMED --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED --add-modules=java.se --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+    </STARTUP>
     <predefined_log_file enabled="true" id="JBoss" />
     <RunnerSettings RunnerId="Debug">
       <option name="DEBUG_PORT" value="9009" />
