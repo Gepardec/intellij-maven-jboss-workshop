@@ -98,5 +98,44 @@ This PR addresses all requirements for Issue #2, fixing the broken Maven build, 
 - **Tests**: `HelloWorldIT.jsonRest` passed (1 test run, 0 failures).
 - **Deployment**: Verified successful deployment to the `/helloworld-rs` context on a running WildFly instance.
 
+## 6. User Input History (Full List)
+The following is the chronological list of user inputs provided during this session:
+
+1.  "can you alos read the issues from github for this project?"
+2.  "fix issue number 2"
+3.  "download wildfile 17.0.1 (README.md) and create an intellij run configuration"
+4.  "Error: Application Server 'JBoss 17.0.1.Final' is not configured"
+5.  "start the run configuration"
+6.  "is wildfly now running? if yes stop it"
+7.  "run intgration tests as well in build step"
+8.  "fix failing HelloWorldIT"
+9.  "run mvn clean install and verify the the build"
+10. "mvn clean install is failing [ERROR] HelloWorldIT.jsonRest:14 » Connect Connection refused why?"
+11. "stop wildfly server"
+12. "which files should be added to github?"
+13. "add idea configuration file to git"
+14. "intellij run configuiration start fails with [INFO] STANDALONE server is starting up. Exception in thread \"main\" java.lang.UnsupportedOperationException: Setting a system-wide Policy object is not supported..."
+15. "pom.xml has two dependencies which should be not deleted [XML snippet]"
+16. "[ERROR] Failed to execute goal on project intellij-maven-jboss-helloworld-rs... use settings.xml file"
+17. "run mvn cean install and verify the error"
+18. "is WildFly 17 java 21 compatible"
+19. "and java 17"
+20. "and java 11"
+21. "the run the project with java 11"
+22. "adapt the README.md with all informaiton"
+23. "create a new git branch feature/ai_poc_junie and commit and push the new and adapted files. then create a merge request which includes all neccessary information"
+24. "add all files and push them to the branch"
+25. "git push again"
+26. "create a detailes git pull request"
+27. "create the pull request for git"
+28. "can the pull request with text be created in the command line?"
+29. "install github cli"
+30. "use github cli to create the pullrequest"
+31. "how can i provid my credentials otherwise?"
+32. "create AGENT.md file which includes all interaction with junie"
+33. "it should include the exact commands i provided"
+34. "can i have a full list what my user input was?"
+35. "add them to the AGENT.md file"
+
 ---
 *Created by Junie - April 2026*
