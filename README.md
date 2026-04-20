@@ -1,16 +1,58 @@
 # intellij-maven-jboss-workshop
 
-Try to fix the maven project!
+Maven-based Java EE project with REST API, deployable to WildFly 17.
 
-you are only allowed to use intellij. no commandline. no git-bash. etc.
+## Requirements
 
-first create a feature branch with your name like. feature/hwirnsberger
+- Java 11
+- Maven 3.6+
+- WildFly 17.0.1 (downloaded automatically or manually)
 
-you should be able to deploy the war archive in intellij to wildfly.
-https://download.jboss.org/wildfly/17.0.1.Final/wildfly-17.0.1.Final.zip
+## Build
 
-you are on a good way if the test HelloWorldIT is green.
+```bash
+mvn clean install -DskipTests
+```
 
-if you are satisfied with your solution push your branch
+## Run Integration Tests
 
-glhf
+```bash
+mvn -pl intellij-maven-jboss-helloworld-rs verify -Pit-integration-tests
+```
+
+## IntelliJ Run Configurations
+
+| Configuration | Description |
+|---------------|-------------|
+| WildFly 17 Server | Builds, deploys WAR to WildFly, and starts server |
+| Build All (clean install) | Full project build |
+| Package WAR | Builds WAR file only |
+| Run Integration Tests | Runs HelloWorldIT with integration-tests profile |
+
+### Running with WildFly
+
+1. Open IntelliJ
+2. Select "WildFly 17 Server" configuration
+3. Click Run - this will:
+   - Build the project with Maven
+   - Deploy WAR to WildFly
+   - Start WildFly server
+
+### Running Integration Tests
+
+1. Start WildFly 17 Server (or manually start WildFly)
+2. Run "Run Integration Tests" configuration
+
+## Project Structure
+
+- `intellij-maven-jboss-helloworld-service` - CDI service layer
+- `intellij-maven-jboss-helloworld-rs` - JAX-RS REST API (WAR)
+- `intellij-maven-jboss-helloworld-persistence` - Persistence layer
+
+## REST Endpoint
+
+```
+GET http://localhost:8080/helloworld-rs/hello
+```
+
+Returns: `"Hello World!"`
